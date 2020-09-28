@@ -30,14 +30,14 @@ pip3 install grpcio-tools
 
 ### Compilar e executar servidor Java
 ```
-cd grpc_java_banknoteManager
+cd java
 mvn compile
 mvn exec:java -D"exec.mainClass"="Server"
 ```
 
 ### Compilar e executar cliente Python
 ```
-cd grpc_python_banknoteManager
+cd python
 python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. service.proto
 python3 client.py
 ```
