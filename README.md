@@ -37,7 +37,7 @@ mvn exec:java -D"exec.mainClass"="Server"
 
 ### Compilar e executar cliente Python
 ```
-cd python
+cd ../python
 python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. service.proto
 python3 client.py
 ```
