@@ -314,7 +314,7 @@ public class Functionalities {
       }
       
       /* Lista alunos */
-      ResultSet resultSet = statement.executeQuery("SELECT * FROM aluno, matricula WHERE (select ra_aluno FROM matricula WHERE ano = " + String.valueOf(ano) + " AND semestre = " + String.valueOf(semestre) + " AND cod_disciplina = '" + String.valueOf(discCode) + "') AND matricula.ra_aluno = aluno.ra;");
+      ResultSet resultSet = statement.executeQuery("SELECT * FROM aluno WHERE (select ra_aluno FROM matricula WHERE ano = " + String.valueOf(ano) + " AND semestre = " + String.valueOf(semestre) + " AND cod_disciplina = '" + String.valueOf(discCode) + "' AND matricula.ra_aluno = aluno.ra);");
       
       /* Nao ha alunos matriculados */
       if(!resultSet.isBeforeFirst()){
@@ -331,8 +331,6 @@ public class Functionalities {
         aluno.setRA(resultSet.getInt("ra"));
         aluno.setNome(resultSet.getString("nome"));
         aluno.setPeriodo(resultSet.getInt("periodo"));
-        aluno.setNota(resultSet.getFloat("nota"));
-        aluno.setFaltas(resultSet.getInt("faltas"));
 
         /* Adicionando aluno */
         res.addAlunos(aluno);

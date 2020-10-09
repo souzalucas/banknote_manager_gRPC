@@ -54,15 +54,11 @@ python3 client.py
 RA: 111111
 Nome: Fulano
 Periodo: 6
-Nota: 10.0
-Faltas: 5
 --------------------
 
 RA: 222222
 Nome: Ciclano
 Periodo: 7
-Nota: 0.0
-Faltas: 1
 --------------------
 ```
 

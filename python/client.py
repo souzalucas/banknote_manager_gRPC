@@ -141,13 +141,6 @@ def client():
             print("\nRA:", aluno.RA)
             print("Nome:", aluno.nome)
             print("Periodo:", aluno.periodo)
-            
-            if (aluno.nota == float(-1)):
-              print("Nota: N/A")
-            else:
-              print("Nota:", aluno.nota)
-
-            print("Faltas:", aluno.faltas)
             print("--------------------")
         
         else:

@@ -31,4 +31,3 @@ message Reply {
   string status = 2;
   repeated Aluno alunos = 3;
 }
-
